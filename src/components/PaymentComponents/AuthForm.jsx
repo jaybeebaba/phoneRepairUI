@@ -7,8 +7,8 @@ const AuthForm = () => {
   return (
     <div >
       {/* Create Account */}
-      <div className="bg-[#F2F2F2] p-6 rounded-lg shadow-lg">
-        <div className="flex justify-between items-center mb-4">
+      <div className="bg-[#F2F2F2] p-4  md:p-6 rounded-lg shadow-sm">
+        <div className="space-y-4 md:flex justify-between items-center mb-4">
           <h2 className="text-lg font-semibold">Create Account</h2>
           <div className='flex items-center space-x-2 text-sm text-gray-700'>
             <p>Already have an account?</p>
