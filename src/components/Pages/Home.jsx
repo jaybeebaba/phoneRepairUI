@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Damages from '../homeComponents/Damages.jsx';
 import Carousel from '../homeComponents/Carousel.jsx';
 import Faqs from '../homeComponents/Faqs.jsx';

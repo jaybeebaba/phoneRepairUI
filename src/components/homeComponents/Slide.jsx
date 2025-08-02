@@ -75,8 +75,8 @@ const Slide = () => {
                 <SwiperSlide key={index} className="flex flex-col text-center px-10 py-6 gap-4 items-center justify-center bg-gray-300 rounded-xl">
                     <StarRating rating={slide.rating}/>
                     <p className="font-bold">{slide.text}</p>
-                    <p className="text-sm text-gray-600 font-semibold">{slide.description}</p>
-                    <p className="text-lg font-semibold">{slide.name}</p>
+                    <p className="text-sm text-gray-600 font-medium">{slide.description}</p>
+                    <p className="text-medium font-semibold">{slide.name}</p>
                 </SwiperSlide>
             ))}
 

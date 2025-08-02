@@ -36,16 +36,16 @@ const Damages = () => {
         }
     ]
 
-    const displayDamages = (image, title, text) =>{
+    const displayDamages = (image, title, text) => {
         return (
-            <div className='flex flex-col items-center justify-center gap-3 rounded-3xl bg-white text-black p-8 '>
-                <div className='flex items-center justify-center mb-4 rounded-full bg-teal-200'
-                style={{ width: '70px', height: '70px',  }}>
-                {/* <img src={image} alt={title} className='w-full h-40 object-cover mb-4 rounded' /> */}
+            <div className='flex flex-col items-center justify-center gap-3 rounded-3xl bg-white text-black  p-4 lg:p-8 '>
+                <div className='flex items-center justify-center md:mb-4 rounded-full bg-teal-200'
+                    style={{ width: '70px', height: '70px', }}>
+                    {/* <img src={image} alt={title} className='w-full h-40 object-cover mb-4 rounded' /> */}
                 </div>
-                <h2 className='text-xl font-bold mb-2'>{title}</h2>
+                <h2 className='text-xl font-bold md:mb-2'>{title}</h2>
                 <p className='text-xs font-semibold'>{text}</p>
-                <Link to="/order"><button className='mt-4 border border-gray-900 text-gray-900 px-3 text-xs font-semibold py-2 rounded-3xl'>Fix My Phone</button></Link>
+                <Link to="/order"><button className='md:mt-4 border border-gray-900 text-gray-900 px-3 text-xs font-semibold py-2 rounded-3xl'>Fix My Phone</button></Link>
             </div>
         )
     }
@@ -55,16 +55,16 @@ const Damages = () => {
             {displayDamages(damage.image, damage.title, damage.text)}
         </div>
     ))
-  return (
-     <div className='flex gap-10 flex-col items-center bg-[#0A3A5C] text-white justify-center md:px-40 md:py-24 mt-10'>
-        <h1 className='text-center text-3xl font-bold lg:w-2/5'>We Make Mobile  Device Repair Stress Free</h1>
+    return (
+        <div className='flex gap-4 md:gap-10 flex-col items-center bg-[#0A3A5C] text-white justify-center p-8 md:px-12 lg:px-40 md:py-16'>
+            <h1 className='text-center text-3xl font-bold lg:w-2/5'>We Make Mobile  Device Repair Stress Free</h1>
 
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-blue-900'>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-blue-900'>
                 {displayAllDamages}
-          
+
+            </div>
         </div>
-      </div>
-  )
+    )
 }
 
 export default Damages

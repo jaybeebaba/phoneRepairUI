@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
   
-  <header className='  bg-[#0A3A5C] clip-slant pb-20'>
+  <header className='  bg-[#0A3A5C] lg:clip-slant lg:pb-20'>
 
   <div className="w-full text-white  px-12 py-6  lg:px-20   min-h-[40px]" >
     <div className=" max-w-7xl mx-auto flex justify-between items-center">

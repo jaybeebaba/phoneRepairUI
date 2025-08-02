@@ -7,11 +7,11 @@ const PaymentMethod = () => {
   const Auth = false; // Assuming this is a placeholder for authentication state
 
   return (
-    <div >
+   <div >
       {/* Create Account */}
-      <div className={`bg-[#F2F2F2] p-6 rounded-lg shadow-lg ${!Auth ? 'pt-2 pb-2 ' : ''}`}>
-        <div className={`flex justify-between mb-6 items-center  ${!Auth ? 'mb-0' : ''}`}>
-          <h2 className="text-lg font-semibold">Select Payment Details</h2>
+      <div className={`bg-[#F2F2F2]  rounded-lg shadow-lg ${!Auth ? 'pt-2 pb-2 pl-6 ' : 'p-6'}`}>
+        <div className={`flex justify-between items-center  ${!Auth ? 'mb-0' : 'mb-6 '}`}>
+          <h2 className="text-lg font-semibold">Select Payment Method</h2>
         </div>
         {Auth &&
           <>

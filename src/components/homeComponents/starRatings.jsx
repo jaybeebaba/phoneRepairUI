@@ -7,7 +7,7 @@ const StarRating = ({ rating, totalStars = 5 }) => {
       {Array.from({ length: totalStars }, (_, index) => (
         <FaStar
           key={index}
-          className={`text-xl ${
+          className={`text-base md:text-xl ${
             index < rating ? 'text-green-600' : 'text-white'
           }`}
         />
