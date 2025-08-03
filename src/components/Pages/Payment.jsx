@@ -6,7 +6,7 @@ import PaymentMethod from "../PaymentComponents/PaymentMethod.jsx";
 
 export default function Checkout() {
 
-    const Auth = false; // Placeholder for authentication state
+    const Auth = true; // Placeholder for authentication state
 
     return (
         <div className="min-h-screen py-4 px-4 lg:px-56">

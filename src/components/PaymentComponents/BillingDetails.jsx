@@ -1,57 +1,93 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
-import Button from './Button.jsx'
-import { FaGoogle, FaApple, FaFacebook, FaEnvelope } from 'react-icons/fa';
+import React from 'react';
 
 const BillingDetails = () => {
-  const Auth = false; // Assuming this is a placeholder for authentication state
+
+  const Auth = true;
 
   return (
-    <div >
-      {/* Create Account */}
-      <div className={`bg-[#F2F2F2]  rounded-lg shadow-lg ${!Auth ? 'pt-2 pb-2 pl-6 ' : 'p-6'}`}>
-        <div className={`flex justify-between items-center  ${!Auth ? 'mb-0' : 'mb-6 '}`}>
-          <h2 className="text-lg font-semibold">Billing Details</h2>
-        </div>
-        {Auth &&
-          <>
-            <div className="space-y-3 pr-8">
-              <Button icon={<FaGoogle />} text="Continue with Google" />
-              <Button icon={<FaApple />} text="Continue with Apple" />
-              <Button icon={<FaFacebook />} text="Continue with Facebook" />
-              <Button icon={<FaEnvelope />} text="Continue with Email" />
-            </div>
-
-
-            <div className="flex items-start mt-4 space-x-2">
-              <input type="checkbox" className="mt-1" />
-              <p className="text-sm text-gray-700">
-                Send me tips, trends, updates & offers. <br />
-                <span className="text-gray-500">You can unsubscribe at any time.</span>
-              </p>
-            </div>
-
-            <p className="text-xs text-gray-500 mt-3">
-              By continuing, you confirm you are 18 or over and agree to our{" "}
-              <a href="#" className="text-blue-500 underline">Privacy Policy</a> and{" "}
-              <a href="#" className="text-blue-500 underline">Terms of Use</a>.
-            </p>
-
-            <div className='flex justify-end'>
-              <Link
-                to=""
-                className="inline-block bg-green-400 text-blue-900 font-semibold px-3 py-2 text-xs rounded-full hover:bg-green-300 transition mt-4 justify-right"
-              >
-                Create & Continue
-              </Link>
-            </div>
-          </>
-        }
-
+   <div className={`bg-[#F2F2F2]  rounded-lg shadow-lg ${!Auth ? 'pt-2 px-6 ' : 'p-6'}`}>
+    <div className={`flex justify-between items-center  ${!Auth ? 'mb-0' : 'mb-6 '}`}>
+      {/* Heading */}
+      <h2 className="text-xl font-semibold mb-2">Billing Details</h2>
       </div>
+      {Auth &&
+      <>
+      <p className="text-sm text-gray-600 mb-6">
+        We collect and use personal data in accordance with our{' '}
+        <a href="#" className="text-blue-600 underline">Privacy Policy</a>. By creating an account,
+        you agree to our{' '}
+        <a href="#" className="text-blue-600 underline">Terms and Conditions</a>.
+      </p>
 
+      {/* Form */}
+      <form className="space-y-4">
+        {/* Name Fields */}
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label className="block text-sm font-medium mb-1">First Name <span className="text-red-500">*</span></label>
+            <input type="text" placeholder="Usman" className="w-full px-4 py-2 rounded-full border border-gray-300 focus:outline-none" />
+          </div>
+          <div>
+            <label className="block text-sm font-medium mb-1">Last Name <span className="text-red-500">*</span></label>
+            <input type="text" placeholder="Tariq" className="w-full px-4 py-2 rounded-full border border-gray-300 focus:outline-none" />
+          </div>
+        </div>
+
+        {/* Company */}
+        <div>
+          <label className="block text-sm font-medium mb-1">Company Name<span className="text-red-500">*</span></label>
+          <input type="text" placeholder="Saudi Arabia" className="w-full px-4 py-2 rounded-full border border-gray-300 focus:outline-none" />
+        </div>
+
+        {/* Country */}
+        <div>
+          <label className="block text-sm font-medium mb-1">Country<span className="text-red-500">*</span></label>
+          <input type="text" placeholder="Saudi Arabia" className="w-full px-4 py-2 rounded-full border border-gray-300 focus:outline-none" />
+        </div>
+
+        {/* Address 1 */}
+        <div>
+          <label className="block text-sm font-medium mb-1">Address Line 1<span className="text-red-500">*</span></label>
+          <input type="text" placeholder="Saudi Arabia" className="w-full px-4 py-2 rounded-full border border-gray-300 focus:outline-none" />
+        </div>
+
+        {/* Address 2 */}
+        <div>
+          <label className="block text-sm font-medium mb-1">Address Line 2</label>
+          <input type="text" placeholder="Saudi Arabia" className="w-full px-4 py-2 rounded-full border border-gray-300 focus:outline-none" />
+        </div>
+
+        {/* City / State / Zip */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div>
+            <label className="block text-sm font-medium mb-1">City<span className="text-red-500">*</span></label>
+            <input type="text" placeholder="Saudi Arabia" className="w-full px-4 py-2 rounded-full border border-gray-300 focus:outline-none" />
+          </div>
+          <div>
+            <label className="block text-sm font-medium mb-1">State / Province / Region</label>
+            <input type="text" placeholder="Saudi Arabia" className="w-full px-4 py-2 rounded-full border border-gray-300 focus:outline-none" />
+          </div>
+          <div>
+            <label className="block text-sm font-medium mb-1">Zip / Postal Code</label>
+            <input type="text" placeholder="12345" className="w-full px-4 py-2 rounded-full border border-gray-300 focus:outline-none" />
+          </div>
+        </div>
+
+        {/* Button */}
+        <div className="flex justify-end pt-4">
+          <button
+            type="submit"
+            className="bg-green-400 hover:bg-green-300 text-white font-semibold text-sm px-6 py-2 rounded-full transition"
+          >
+            Save & Continue
+          </button>
+        </div>
+      </form>
+      </>
+      }
     </div>
-  )
-}
+  );
+};
 
-export default BillingDetails
+export default BillingDetails;
