@@ -1,17 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { FaRegThumbsUp } from 'react-icons/fa';
+
 const OrderSuccess = () => {
   return (
     <div className="py-16 px-3 lg:px-80 flex flex-col items-center justify-center space-y-5 text-center">
         <div className='flex items-center justify-center w-16 h-16 md:w-28 md:h-28 bg-green-200 rounded-full'>
-
+            <FaRegThumbsUp className='text-4xl md:text-6xl' />    
         </div>
 
         <h2 className='text-2xl md:text-4xl font-bold '>
             Thank you for your order!
         </h2>
 
-        <p className='text-sm font-semibold'>
+        <p className='text-sm font-semibold md:w-1/2'>
             Your mobile repair order has been successfully placed. <br/> We will contact you shortly to confirm the details. Get ready for amazing amazing experience with us!
         </p>
 
