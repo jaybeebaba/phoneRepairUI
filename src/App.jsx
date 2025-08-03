@@ -7,6 +7,7 @@ import Navbar from './components/CommonComponents/Navbar';
 import Footer from './components/CommonComponents/Footer';
 import Checkout from './components/Pages/Checkout';
 import Faqs from './components/Pages/Faqs';
+import OrderSuccess from './components/Pages/OrderSuccess';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Route path="/order" element={<OrderDetails />} />
       <Route path="/checkout" element={<Checkout />} />
       <Route path="/faqs" element={<Faqs />} />
+      <Route path="/success" element={<OrderSuccess />} />
     </Routes>
     <Footer />
     </div>
