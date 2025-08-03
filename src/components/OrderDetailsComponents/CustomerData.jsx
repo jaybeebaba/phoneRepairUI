@@ -98,7 +98,7 @@ const CustomerData = () => {
 
       {/* Button */}
       <Link
-        to="/payment"
+        to="/checkout"
         className="inline-block bg-green-400 text-blue-900 font-semibold px-3 py-2 text-xs rounded-full hover:bg-green-300 transition"
       >
         Proceed to Payment

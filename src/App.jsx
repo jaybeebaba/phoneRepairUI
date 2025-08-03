@@ -5,7 +5,7 @@ import About from './components/Pages/About';
 import OrderDetails from './components/Pages/OrderDetails';
 import Navbar from './components/CommonComponents/Navbar';
 import Footer from './components/CommonComponents/Footer';
-import Payment from './components/Pages/Payment';
+import Checkout from './components/Pages/Checkout';
 import Faqs from './components/Pages/Faqs';
 
 
@@ -17,7 +17,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/order" element={<OrderDetails />} />
-      <Route path="/payment" element={<Payment />} />
+      <Route path="/checkout" element={<Checkout />} />
       <Route path="/faqs" element={<Faqs />} />
     </Routes>
     <Footer />

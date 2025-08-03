@@ -1,16 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
-const BillingDetails = () => {
+const BillingDetails = ({auth}) => {
 
-  const Auth = true;
-
-  return (
-   <div className={`bg-[#F2F2F2]  rounded-lg shadow-lg ${!Auth ? 'pt-2 px-6 ' : 'p-6'}`}>
-    <div className={`flex justify-between items-center  ${!Auth ? 'mb-0' : 'mb-6 '}`}>
+ return (
+   <div className={`bg-[#F2F2F2]  rounded-lg shadow-lg ${!auth ? 'pt-2 px-6 ' : 'p-6'}`}>
+    <div className={`flex justify-between items-center  ${!auth ? 'mb-0' : 'mb-6 '}`}>
       {/* Heading */}
       <h2 className="text-xl font-semibold mb-2">Billing Details</h2>
       </div>
-      {Auth &&
+      {auth &&
       <>
       <p className="text-sm text-gray-600 mb-6">
         We collect and use personal data in accordance with our{' '}
@@ -75,14 +74,14 @@ const BillingDetails = () => {
         </div>
 
         {/* Button */}
-        <div className="flex justify-end pt-4">
-          <button
-            type="submit"
-            className="bg-green-400 hover:bg-green-300 text-white font-semibold text-sm px-6 py-2 rounded-full transition"
-          >
-            Save & Continue
-          </button>
-        </div>
+        <div className='flex justify-end'>
+              <Link
+                to=""
+                className="inline-block bg-green-400 text-blue-900 font-semibold px-3 py-2 text-xs rounded-full hover:bg-green-300 transition mt-4 justify-right"
+              >
+                Save & Continue
+              </Link>
+            </div>
       </form>
       </>
       }

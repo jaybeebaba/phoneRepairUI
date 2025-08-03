@@ -1,12 +1,13 @@
 import React from "react";
-import AuthForm from "../PaymentComponents/AuthForm.jsx";
-import OrderSummary from "../PaymentComponents/OrderSummary.jsx";
-import BillingDetails from "../PaymentComponents/BillingDetails.jsx";
-import PaymentMethod from "../PaymentComponents/PaymentMethod.jsx";
+import AuthForm from "../Checkout/AuthForm.jsx";
+import OrderSummary from "../Checkout/OrderSummary.jsx";
+import BillingDetails from "../Checkout/BillingDetails.jsx";
+import PaymentMethod from "../Checkout/PaymentMethod.jsx";
 
 export default function Checkout() {
 
     const Auth = true; // Placeholder for authentication state
+    const added = true; // Placeholder for billing details state
 
     return (
         <div className="min-h-screen py-4 px-4 lg:px-56">
@@ -14,8 +15,8 @@ export default function Checkout() {
                 {/* Left Side */}
                 <div className="md:col-span-2 space-y-5">
                     {!Auth && <AuthForm />}
-                    <BillingDetails />
-                    <PaymentMethod />
+                    {!added ? <BillingDetails auth={Auth} /> : ""}
+                    <PaymentMethod auth={Auth} added={added} />
                 </div>
 
                 {/* Right Side */}
