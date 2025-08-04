@@ -6,9 +6,9 @@ const TrackRepair = () => {
   return (
     <div className="bg-white min-h-screen px-4 md:px-16 lg:px-72 py-10">
       {/* Heading */}
-      <div className='flex items-center justify-between mb-10 gap-2'>
-        <div className="flex flex-col gap-8">
-          <h1 className="text-3xl md:text-5xl font-bold ">Track your repair</h1>
+      <div className='space-y-4 md:space-y-0 md:flex items-center justify-between mb-10 gap-2'>
+        <div className="flex flex-col gap-3 md:gap-8">
+          <h1 className="text-2xl md:text-5xl font-bold ">Track your repair</h1>
 
           <input
             type="text"
@@ -37,13 +37,13 @@ const TrackRepair = () => {
       <div className="flex flex-col items-center justify-center ">
 
 
-        <div className="flex gap-8 rounded-lg border-gray-900 border-2 p-8 w-full">
-          <div className="flex  flex-col gap-4 w-2/3 justify-between border-r-2 pr-8 border-r-gray-900">
-            <h2 className="font-semibold text-2xl">iPhone 13</h2>
+        <div className="flex gap-2 md:gap-8 rounded-lg border-gray-900 border-2  p-4 md:p-8 w-full">
+          <div className="flex  flex-col gap-4 w-2/3 justify-between border-r-2 pr-4 md:pr-8 border-r-gray-900">
+            <h2 className="font-semibold text-lg md:text-2xl">iPhone 13</h2>
             <div >
               <Link
                 to=""
-                className="inline-block bg-green-400 text-gray-900 font-semibold px-3 py-2 text-base rounded-full  "
+                className="inline-block bg-green-400 text-gray-900 font-semibold px-3 py-2 text-xs rounded-full  "
               >
                 In Progress
               </Link>
@@ -58,13 +58,13 @@ const TrackRepair = () => {
           <div className="flex flex-col font-semibold gap-6 justify-center text-gray-900">
 
             <div className='space-y-1'>
-              <p className="text-sm ">Estimated Completion</p>
-              <p className="text-lg">July 22, 2025</p>
+              <p className="text-xs md:text-sm ">Estimated Completion</p>
+              <p className="text-sm md:text-lg">July 22, 2025</p>
             </div>
 
             <div className='space-y-1'>
-              <p className="text-sm ">Service Center</p>
-              <p className="text-lg">TechFix</p>
+              <p className="text-xs md:text-sm ">Service Center</p>
+              <p className="text-sm md:text-lg">TechFix</p>
             </div>
 
           </div>
@@ -120,20 +120,20 @@ const TrackRepair = () => {
 
 
       {/* Help Section */}
-      <div className="text-gray-900 font-bold md:mt-12">
-        <h3 className="text-3xl  mb-4">Need help with your repair?</h3>
-        <div className="flex flex-col md:flex-row justify-between  text-3xl">
+      <div className="text-gray-900 font-bold mt-8 md:mt-12">
+        <h3 className="text-xl md:text-3xl  mb-4">Need help with your repair?</h3>
+        <div className="flex md:flex-row justify-between text-xl  md:text-3xl">
           <div className="flex items-center gap-3 justify-center">
             <FaComments className="" />
-            <span className='text-xl'>Live Chat</span>
+            <span className='text-sm'>Live Chat</span>
           </div>
           <div className="flex items-center gap-3 justify-center">
             <FaPhone className="" />
-            <span className='text-xl'>Call Us</span>
+            <span className='text-sm'>Call Us</span>
           </div>
           <div className="flex items-center gap-3 justify-center">
             <FaEnvelope className="" />
-            <span className='text-xl'>Email Us</span>
+            <span className='text-sm'>Email Us</span>
           </div>
         </div>
       </div>
@@ -141,4 +141,4 @@ const TrackRepair = () => {
   );
 };
 
-export default TrackRepair;
+export default TrackRepair; 

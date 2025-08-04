@@ -5,7 +5,7 @@ import { FaCheckCircle } from 'react-icons/fa';
 
 const CustomerData = () => {
   return (
-    <form className="relative z-20 bg-[#F2F2F2] rounded-2xl shadow-md px-6 py-8 max-w-2xl  mx-auto space-y-8 -mt-20 -mb-20">
+    <form className="relative z-20 bg-[#F2F2F2] rounded-2xl shadow-md px-6 py-8 max-w-2xl  mx-auto space-y-8 my-8 lg:-mt-20 lg:-mb-20">
       {/* Customer Data */}
       <div>
         <h2 className="font-bold text-gray-800 mb-4">Customer Data</h2>
