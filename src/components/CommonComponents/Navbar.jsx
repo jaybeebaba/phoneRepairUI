@@ -13,15 +13,15 @@ const Navbar = () => {
   <div className="w-full text-white  px-12 py-6  lg:px-20   min-h-[40px]" >
     <div className=" max-w-7xl mx-auto flex justify-between items-center">
       {/* Logo */}
-      <div className="text-xl font-semibold">Logo</div>
+      <div className="text-xl font-semibold"><Link to="/">Logo</Link></div>
 
       {/* Desktop Nav Links */}
       <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
         <Link to="/">Home</Link>
-        <Link to="/about">About Us</Link>
-        <Link to="/services">Services</Link>
+        <Link to="/trackrepair">Track</Link>
+        <Link to="/order">Order</Link>
         <Link to="/faqs">FAQs</Link>
-        <Link to="/contact">Contact Us</Link>
+        <Link to="/settings">Settings</Link>
         <Link to="/signin" className="flex items-center gap-1">
           Sign In <FaAngleDown className="text-xs" />
         </Link>
@@ -48,10 +48,10 @@ const Navbar = () => {
   {menuOpen && (
     <div className="md:hidden bg-[#0A3A5C] text-white px-12  py-4 flex flex-col gap-4  ">
       <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
-      <Link to="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
-      <Link to="/services" onClick={() => setMenuOpen(false)}>Services</Link>
+      <Link to="/trackrepair" onClick={() => setMenuOpen(false)}>Track</Link>
+      <Link to="/order" onClick={() => setMenuOpen(false)}>Order</Link>
       <Link to="/faqs" onClick={() => setMenuOpen(false)}>FAQs</Link>
-      <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link>
+      <Link to="/settings" onClick={() => setMenuOpen(false)}>Settings</Link>
       <Link to="/signin" onClick={() => setMenuOpen(false)}>Sign In</Link>
       <span className="">
           <img
