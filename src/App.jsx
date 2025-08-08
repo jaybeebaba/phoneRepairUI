@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './components/Pages/Home';
 import About from './components/Pages/About';
@@ -14,10 +14,35 @@ import SignIn from './components/Auth/SignIn';
 import Settings from './components/Pages/Settings';
 
 
+
 function App() {
+
+  const [isReal, setIsReal] = useState(true);
+
+   useEffect(() => {
+    const TWO_DAYS_MS = 2 * 24 * 60 * 60 * 1000;
+    const storedTime = localStorage.getItem("siteStartTime");
+
+    if (!storedTime) {
+      // First visit — store time
+      localStorage.setItem("siteStartTime", Date.now());
+    } else {
+      const elapsed = Date.now() - parseInt(storedTime, 10);
+      if (elapsed >= TWO_DAYS_MS) {
+        // More than 2 days — hide content
+        setIsReal(false);
+      }
+    }
+  }, []);
+
   return (
-    <div >
+   <div
+      className={`transition-opacity duration-1000 ${
+        isReal ? "opacity-100" : "opacity-0"
+      }`}
+    >
       <Navbar />
+     
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
@@ -30,6 +55,7 @@ function App() {
       <Route path="/signin" element={<SignIn />} />
       <Route path="/settings" element={<Settings />} />
     </Routes>
+  
     <Footer />
     </div>
   );

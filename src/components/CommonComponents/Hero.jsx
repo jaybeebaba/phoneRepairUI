@@ -21,13 +21,12 @@ const Hero = () => {
           {/* Left: Text */}
           <div>
             <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold leading-tight mb-6 md:w-4/5">
-              Repairing Your 
-              <span className="text-green-400"> Broken Phones</span>
+              PAY MY MONEY BRO. 
+              {/* <span className="text-green-400"> Broken Phones</span> */}
             </h1>
 
             <p className="text-sm sm:text-base text-gray-200 mb-6 leading-relaxed">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text.
+              Just Pay me
             </p>
 
             <Link
